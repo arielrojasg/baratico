@@ -3830,6 +3830,10 @@ code:not(.language-html) {
   height: 26px;
 }
 
+.login-logo  {
+  max-width: 50%;
+}
+
 .navbar-header.small-nav-header {
   min-width: 50px;
   width: 50px;

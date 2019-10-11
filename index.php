@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login - Legacy Group's Dashboard</title>
+        <title>Login - Baratico</title>
 
         <!-- ========== COMMON STYLES ========== -->
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
@@ -27,29 +27,30 @@
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <div class="panel login-box">
-                            <div class="panel-heading">
+                            <div class="panel-heading text-center">
+                            <img src="images/baratico-logo.png" class="login-logo">
                                 <div class="panel-title text-center">
-                                    <h4>Login - Legacy Group's Dashboard</h4>
+                                    <h4>Iniciar sesión</h4>
                                 </div>
                             </div>
                             <div class="panel-body p-20">
 
                                 <div class="section-title">
-                                    <p class="sub-title text-muted">Welcome to Legacy Group's Dashboard System.</p>
+                                    <p class="sub-title text-muted">Bienvenido al Sistema de Baratico</p>
                                 </div>
 
                                 <form action="login_code.php" method="POST">
                                 	<div class="form-group">
-                                		<label for="exampleInputEmail1">Email address</label>
+                                		<label for="exampleInputEmail1">Usuario</label>
                                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Email Id" autocomplete="off" >
                                     </div>
                                 	<div class="form-group">
-                                		<label for="exampleInputPassword1">Password</label>
+                                		<label for="exampleInputPassword1">Contraseña</label>
                                 		<input type="password" name="passw" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 	</div>
                                     <div class="form-group mt-20">
                                         <div class="">
-                                            <button type="submit" name="submit" class="btn btn-success btn-labeled pull-right">Sign in<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+                                            <button type="submit" name="submit" class="btn btn-success btn-labeled pull-right">Iniciar Sesión<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -60,7 +61,7 @@
                                     {
                                 ?>
 
-                                    <div class="alert-light text-danger text-center">The email or password you entered doesn't match any account</div>
+                                    <div class="alert-light text-danger text-center">Email o password equivocados</div>
                                 <?php
                                     }
                                 ?>
@@ -69,7 +70,7 @@
                             </div>
                         </div>
                         <!-- /.panel -->
-                        <p class="text-muted text-center"><small>Copyright © Legacy Group's 2019</small></p>
+                        <p class="text-muted text-center"><small>Copyright © Baratico 2019</small></p>
                     </div>
                     <!-- /.col-md-6 col-md-offset-3 -->
                 </div>

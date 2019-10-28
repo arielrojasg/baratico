@@ -230,118 +230,443 @@ CREATE VIEW vista_productos_GUANA AS SELECT * FROM productos where cod_punto_ven
 CREATE VIEW vista_productos_PUNTA AS SELECT * FROM productos where cod_punto_venta = 'PU006';
 CREATE VIEW vista_productos_LIM AS SELECT * FROM productos where cod_punto_venta = 'LI007';
 
-CREATE ROLE
-	administrador,
-	gerente_sj,
-	gerente_ala,
-	gerente_car,
-	gerente_her,
-	gerente_guana,
-	gerente_punta,
-	gerente_lim,
-	gerente_general_sj,
-    gerente_general_ala,
-	gerente_general_car,
-	gerente_general_her,
-	gerente_general_guana,
-	gerente_general_punta,
-	gerente_general_lim,
-    sistemas_sj,
-	sistemas_ala,
-	sistemas_car,
-	sistemas_her,
-	sistemas_guana,
-	sistemas_punta,
-	sistemas_lim;
+CREATE ROLE	'administrador'@'192.168..';
+CREATE ROLE	'gerente_sj'@'192.168..';
+CREATE ROLE	'gerente_ala'@'192.168..';
+CREATE ROLE	'gerente_car'@'192.168..';
+CREATE ROLE	'gerente_her'@'192.168..';
+CREATE ROLE	'gerente_guana'@'192.168..';
+CREATE ROLE	'gerente_punta'@'192.168..';
+CREATE ROLE	'gerente_lim'@'192.168..';
+CREATE ROLE	'gerente_general_sj'@'192.168..';
+CREATE ROLE	'gerente_general_ala'@'192.168..';
+CREATE ROLE	'gerente_general_car'@'192.168..';
+CREATE ROLE	'gerente_general_her'@'192.168..';
+CREATE ROLE	'gerente_general_guana'@'192.168..';
+CREATE ROLE	'gerente_general_punta'@'192.168..';
+CREATE ROLE	'gerente_general_lim'@'192.168..';
+CREATE ROLE	'sistemas_sj'@'192.168..';
+CREATE ROLE	'sistemas_ala'@'192.168..';
+CREATE ROLE	'sistemas_car'@'192.168..';
+CREATE ROLE	'sistemas_her'@'192.168..';
+CREATE ROLE	'sistemas_guana'@'192.168..';
+CREATE ROLE	'sistemas_punta'@'192.168..';
+CREATE ROLE	'sistemas_lim'@'192.168..';
 
-	
+-- admin grant
 GRANT ALL 
 ON supermercado.* 
-TO administrador;
-	
-GRANT UPDATE
-ON supermercado.vista_productos_ALA 
-TO gerente_ala;
+TO 'administrador'@'192.168..';
 
-GRANT UPDATE
+-- gerente SJ grant
+GRANT SELECT, UPDATE
 ON supermercado.vista_productos_SJ 
-TO gerente_sj;
+TO 'gerente_sj'@'192.168..';
 
-GRANT UPDATE
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_sj'@'192.168..';
+
+GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO gerente_car;
+TO 'gerente_sj'@'192.168..';
 
-GRANT UPDATE
+GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO gerente_her;
+TO 'gerente_sj'@'192.168..';
 
-GRANT UPDATE
+GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO gerente_guana;
+TO 'gerente_sj'@'192.168..';
 
-GRANT UPDATE
+GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO gerente_punta;
+TO 'gerente_sj'@'192.168..';
 
-GRANT UPDATE
+GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO gerente_lim;
+TO 'gerente_sj'@'192.168..';
 
+-- gerente ALA grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_ALA 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_CAR 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_HER 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_ala'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_LIM 
+TO 'gerente_ala'@'192.168..';
+
+-- gerente CAR grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_CAR 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_HER 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_car'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_LIM 
+TO 'gerente_car'@'192.168..';
+
+-- gerente HER grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_HER 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_CAR 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_her'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_LIM 
+TO 'gerente_her'@'192.168..';
+
+-- gerente GUANA grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_CAR 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_HER 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_guana'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_LIM 
+TO 'gerente_guana'@'192.168..';
+
+-- gerente PUNTA grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_CAR 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_HER 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_punta'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_LIM 
+TO 'gerente_punta'@'192.168..';
+
+-- gerente LIM grant
+GRANT SELECT, UPDATE
+ON supermercado.vista_productos_LIM 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_SJ 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_ALA 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_CAR 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_HER 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_lim'@'192.168..';
+
+GRANT SELECT
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_lim'@'192.168..';
+
+-- gerente general grant
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_SJ
+TO 'gerente_general_sj'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_ALA 
+TO 'gerente_general_ala'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_CAR 
+TO 'gerente_general_car'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_HER 
+TO 'gerente_general_her'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_GUANA 
+TO 'gerente_general_guana'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_PUNTA 
+TO 'gerente_general_punta'@'192.168..';
+
+GRANT INSERT, UPDATE, SELECT, DELETE
+ON supermercado.vista_productos_LIM 
+TO 'gerente_general_lim'@'192.168..';
+
+-- sistemas grant
 GRANT ALL 
 ON supermercado.vista_productos_SJ
-TO gerente_general_sj;
+TO 'sistemas_sj'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_ALA 
-TO gerente_general_ala;
+TO 'sistemas_ala'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_CAR 
-TO gerente_general_car;
+TO 'sistemas_car'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_HER 
-TO gerente_general_her;
+TO 'sistemas_her'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_GUANA 
-TO gerente_general_guana;
+TO 'sistemas_guana'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_PUNTA 
-TO gerente_general_punta;
+TO 'sistemas_punta'@'192.168..';
 
 GRANT ALL 
 ON supermercado.vista_productos_LIM 
-TO gerente_general_lim;
+TO 'sistemas_lim'@'192.168..';
 
+-- admin user 
+CREATE USER 'sm_admin'@'192.168..'IDENTIFIED BY 'Admin1pass';
+-- gerente users
+CREATE USER 'sj_ger'@'192.168..' IDENTIFIED BY 'Sjger1pass';
+CREATE USER 'ala_ger'@'192.168..' IDENTIFIED BY 'Alager1pass';
+CREATE USER 'car_ger'@'192.168..' IDENTIFIED BY 'Carger1pass';
+CREATE USER 'her_ger'@'192.168..' IDENTIFIED BY 'Herger1pass';
+CREATE USER 'guana_ger'@'192.168..' IDENTIFIED BY 'Guanager1pass';
+CREATE USER 'punta_ger'@'192.168..' IDENTIFIED BY 'Puntager1pass';
+CREATE USER 'lim_ger'@'192.168..' IDENTIFIED BY 'Limger1pass';
+-- general users
+CREATE USER 'sj_gen1'@'192.168..' IDENTIFIED BY 'Sjgen1pass';
+CREATE USER 'sj_gen2'@'192.168..' IDENTIFIED BY 'Sjgen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_SJ
-TO sistemas_sj;
+CREATE USER 'ala_gen1'@'192.168..' IDENTIFIED BY 'Alagen1pass';
+CREATE USER 'ala_gen2'@'192.168..' IDENTIFIED BY 'Alagen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_ALA 
-TO sistemas_ala;
+CREATE USER 'car_gen1'@'192.168..' IDENTIFIED BY 'Cargen1pass';
+CREATE USER 'car_gen2'@'192.168..'IDENTIFIED BY 'Cargen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_CAR 
-TO sistemas_car;
+CREATE USER 'her_gen1'@'192.168..' IDENTIFIED BY 'Hergen1pass';
+CREATE USER 'her_gen2'@'192.168..'IDENTIFIED BY 'Hergen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_HER 
-TO sistemas_her;
+CREATE USER 'guana_gen1'@'192.168..' IDENTIFIED BY 'Guanagen1pass';
+CREATE USER 'guana_gen2'@'192.168..' IDENTIFIED BY 'Guanagen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_GUANA 
-TO sistemas_guana;
+CREATE USER 'punta_gen1'@'192.168..' IDENTIFIED BY 'Puntagen1pass';
+CREATE USER 'punta_gen2'@'192.168..' IDENTIFIED BY 'Puntagen2pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_PUNTA 
-TO sistemas_punta;
+CREATE USER 'lim_gen1'@'192.168..' IDENTIFIED BY 'Limgen1pass';
+CREATE USER 'lim_gen2'@'192.168..' IDENTIFIED BY 'Limgen2pass';
+-- sistemas users
+CREATE USER 'sj_sis1'@'192.168..' IDENTIFIED BY 'Sjsis1pass';
+CREATE USER 'sj_sis2'@'192.168..' IDENTIFIED BY 'Sjsis2pass';
+CREATE USER 'sj_sis3'@'192.168..' IDENTIFIED BY 'Sjsis3pass';
 
-GRANT ALL 
-ON supermercado.vista_productos_LIM 
-TO sistemas_lim;
+CREATE USER 'ala_sis1'@'192.168..' IDENTIFIED BY 'Alasis1pass';
+CREATE USER 'ala_sis2'@'192.168..'IDENTIFIED BY 'Alasis2pass';
+CREATE USER 'ala_sis3'@'192.168..' IDENTIFIED BY 'Alasis3pass';
 
+CREATE USER 'car_sis1'@'192.168..' IDENTIFIED BY 'Carsis1pass';
+CREATE USER 'car_sis2'@'192.168..' IDENTIFIED BY 'Carsis2pass';
+CREATE USER 'car_sis3'@'192.168..' IDENTIFIED BY 'Carsis3pass';
+
+CREATE USER 'her_sis1'@'192.168..'IDENTIFIED BY 'Hersis1pass';
+CREATE USER 'her_sis2'@'192.168..' IDENTIFIED BY 'Hersis2pass';
+CREATE USER 'her_sis3'@'192.168..' IDENTIFIED BY 'Hersis3pass';
+
+CREATE USER 'guana_sis1'@'192.168..' IDENTIFIED BY 'Guanasis1pass';
+CREATE USER 'guana_sis2'@'192.168..' IDENTIFIED BY 'Guanasis2pass';
+CREATE USER 'guana_sis3'@'192.168..' IDENTIFIED BY 'Guanasis3pass';
+
+CREATE USER 'punta_sis1'@'192.168..' IDENTIFIED BY 'Puntasis1pass';
+CREATE USER 'punta_sis2'@'192.168..' IDENTIFIED BY 'Puntasis2pass';
+CREATE USER 'punta_sis3'@'192.168..' IDENTIFIED BY 'Puntasis3pass';
+
+CREATE USER 'lim_sis1'@'192.168..' IDENTIFIED BY 'Limsis1pass';
+CREATE USER 'lim_sis2'@'192.168..' IDENTIFIED BY 'Limsis2pass';
+CREATE USER 'lim_sis3'@'192.168..' IDENTIFIED BY 'Limsis3pass';
+
+-- assign admin
+GRANT administrador
+TO 'sm_admin'@'192.168..';
+
+-- assign gerente
+GRANT gerente_sj
+TO 'sj_ger'@'192.168..';
+
+GRANT gerente_ala
+TO 'ala_ger'@'192.168..';
+
+GRANT gerente_car
+TO 'car_ger'@'192.168..';
+
+GRANT gerente_lim
+TO 'her_ger'@'192.168..';
+
+GRANT gerente_her
+TO 'guana_ger'@'192.168..';
+
+GRANT gerente_guana
+TO 'punta_ger'@'192.168..';
+
+GRANT gerente_punta
+TO 'lim_ger'@'192.168..';
+
+-- assign general
+GRANT gerente_general_sj
+TO 'sj_gen1'@'192.168..',
+   'sj_gen2'@'192.168..';
+
+GRANT gerente_general_ala
+TO 'ala_gen1'@'192.168..',
+   'ala_gen2'@'192.168..';
+
+GRANT gerente_general_car
+TO 'car_gen1'@'192.168..',
+   'car_gen2'@'192.168..';
+
+GRANT gerente_general_her
+TO 'her_gen1'@'192.168..',
+   'her_gen2'@'192.168..';
+
+GRANT gerente_general_guana
+TO 'guana_gen1'@'192.168..',
+   'guana_gen2'@'192.168..';
+
+GRANT gerente_general_punta
+TO 'punta_gen1'@'192.168..',
+   'punta_gen2'@'192.168..';
+
+GRANT gerente_general_lim
+TO 'lim_gen1'@'192.168..',
+   'lim_gen2'@'192.168..';
+  
+-- assign sistemas
+GRANT sistemas_sj
+TO 'sj_sis1'@'192.168..',
+   'sj_sis2'@'192.168..',
+   'sj_sis3'@'192.168..';
+
+GRANT sistemas_ala
+TO 'ala_sis1'@'192.168..',
+   'ala_sis2'@'192.168..',
+   'ala_sis3'@'192.168..';
+
+GRANT sistemas_car
+TO 'car_sis1'@'192.168..',
+   'car_sis2'@'192.168..',
+   'car_sis3'@'192.168..';
+   
+GRANT sistemas_her
+TO 'her_sis1'@'192.168..',
+   'her_sis2'@'192.168..',
+   'her_sis3'@'192.168..';
+   
+GRANT sistemas_guana
+TO 'guana_sis1'@'192.168..',
+   'guana_sis2'@'192.168..',
+   'guana_sis3'@'192.168..';
+   
+GRANT sistemas_punta
+TO 'punta_sis1'@'192.168..',
+   'punta_sis2'@'192.168..',
+   'punta_sis3'@'192.168..';
+   
+GRANT sistemas_lim
+TO 'lim_sis1'@'192.168..',
+   'lim_sis2'@'192.168..',
+   'lim_sis3'@'192.168..';
 

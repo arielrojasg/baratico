@@ -42,7 +42,7 @@
                                 <form action="login_code.php" method="POST">
                                 	<div class="form-group">
                                 		<label for="exampleInputEmail1">Usuario</label>
-                                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Email Id" autocomplete="off" >
+                                        <input type="text" name="user" class="form-control" id="exampleInputEmail1" placeholder="Digite su usuario" autocomplete="off" >
                                     </div>
                                 	<div class="form-group">
                                 		<label for="exampleInputPassword1">Contraseña</label>
@@ -61,7 +61,7 @@
                                     {
                                 ?>
 
-                                    <div class="alert-light text-danger text-center">Email o password equivocados</div>
+                                    <div class="alert-light text-danger text-center">Usuario o password equivocados</div>
                                 <?php
                                     }
                                 ?>

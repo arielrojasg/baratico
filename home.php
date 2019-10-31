@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dashboard - Legacy Group </title>
+        <title>Baratico </title>
 
         <!-- ========== COMMON STYLES ========== -->
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
@@ -76,42 +76,11 @@
                             <div class="container-fluid">
                                 <div class="row">
 
-                                    <div class="col-md-8 col-md-offset-2">
-                                        <div class="panel border-primary no-border border-3-top" data-panel-control>
-                                            <div class="panel-heading">
-                                                <div class="panel-title">
-                                                    <h5>Simple Pie Chart</h5>
-                                                </div>
-                                            </div>
-                                            <div class="panel-body p-20">
-
-                                                <div id="chart1" class="op-chart"></div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                <!-- /.col-md-6 -->
                                     <div class="col-md-6">
                                         <div class="panel border-primary no-border border-3-top" data-panel-control>
                                             <div class="panel-heading">
                                                 <div class="panel-title">
-                                                    <h5>Production Change <small>over years</small></h5>
-                                                </div>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div id="production-chart" class="op-chart"></div>
-                                                <!-- /.src-code -->
-                                            </div>
-                                        </div>
-                                        <!-- /.panel -->
-                                    </div>
-                                    <!-- /.col-md-6 -->
-
-                                    <div class="col-md-6">
-                                        <div class="panel border-primary no-border border-3-top" data-panel-control>
-                                            <div class="panel-heading">
-                                                <div class="panel-title">
-                                                    <h5>Traffic Stats <small>over years</small></h5>
+                                                    <h5></small></h5>
                                                 </div>
                                             </div>
                                             <div class="panel-body">

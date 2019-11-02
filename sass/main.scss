@@ -95,7 +95,7 @@ $max-font: 14px;
 body{
     font-family: $body-font;
     -webkit-font-smoothing: antialiased;
-    background-color: $gray-color;
+    background-image: url('../images/bg.jpg');
     color: $light-black-color;
     text-rendering: optimizeLegibility !important;
     letter-spacing: 0.5px;

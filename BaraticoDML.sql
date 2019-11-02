@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+use supermercado;
+>>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 insert into puntos_venta(codigo,provincia)values('SJ001','SAN JOSE');
 insert into puntos_venta(codigo,provincia)values('AL002','ALAJUELA');

@@ -230,30 +230,6 @@ CREATE VIEW vista_productos_GUANA AS SELECT * FROM productos where cod_punto_ven
 CREATE VIEW vista_productos_PUNTA AS SELECT * FROM productos where cod_punto_venta = 'PU006';
 CREATE VIEW vista_productos_LIM AS SELECT * FROM productos where cod_punto_venta = 'LI007';
 
-<<<<<<< HEAD
-CREATE ROLE	'administrador'@'192.168.66.246';
-CREATE ROLE	'gerente_sj'@'192.168.66.246';
-CREATE ROLE	'gerente_ala'@'192.168.66.246';
-CREATE ROLE	'gerente_car'@'192.168.66.246';
-CREATE ROLE	'gerente_her'@'192.168.66.246';
-CREATE ROLE	'gerente_guana'@'192.168.66.246';
-CREATE ROLE	'gerente_punta'@'192.168.66.246';
-CREATE ROLE	'gerente_lim'@'192.168.66.246';
-CREATE ROLE	'gerente_general_sj'@'192.168.66.246';
-CREATE ROLE	'gerente_general_ala'@'192.168.66.246';
-CREATE ROLE	'gerente_general_car'@'192.168.66.246';
-CREATE ROLE	'gerente_general_her'@'192.168.66.246';
-CREATE ROLE	'gerente_general_guana'@'192.168.66.246';
-CREATE ROLE	'gerente_general_punta'@'192.168.66.246';
-CREATE ROLE	'gerente_general_lim'@'192.168.66.246';
-CREATE ROLE	'sistemas_sj'@'192.168.66.246';
-CREATE ROLE	'sistemas_ala'@'192.168.66.246';
-CREATE ROLE	'sistemas_car'@'192.168.66.246';
-CREATE ROLE	'sistemas_her'@'192.168.66.246';
-CREATE ROLE	'sistemas_guana'@'192.168.66.246';
-CREATE ROLE	'sistemas_punta'@'192.168.66.246';
-CREATE ROLE	'sistemas_lim'@'192.168.66.246';
-=======
 CREATE ROLE	'administrador'@'127.0.0.1';
 CREATE ROLE	'gerente_sj'@'127.0.0.1';
 CREATE ROLE	'gerente_ala'@'127.0.0.1';
@@ -276,47 +252,15 @@ CREATE ROLE	'sistemas_her'@'127.0.0.1';
 CREATE ROLE	'sistemas_guana'@'127.0.0.1';
 CREATE ROLE	'sistemas_punta'@'127.0.0.1';
 CREATE ROLE	'sistemas_lim'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- admin grant
 GRANT ALL 
 ON supermercado.* 
-<<<<<<< HEAD
-TO 'administrador'@'192.168.66.246';
-=======
 TO 'administrador'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente SJ grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_SJ 
-<<<<<<< HEAD
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_sj'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_sj'@'192.168.66.246';
-=======
 TO 'gerente_sj'@'127.0.0.1';
 
 GRANT SELECT
@@ -342,38 +286,10 @@ TO 'gerente_sj'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_sj'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente ALA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_ALA 
-<<<<<<< HEAD
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_ala'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_ala'@'192.168.66.246';
-=======
 TO 'gerente_ala'@'127.0.0.1';
 
 GRANT SELECT
@@ -399,38 +315,10 @@ TO 'gerente_ala'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_ala'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente CAR grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_CAR 
-<<<<<<< HEAD
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_car'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_car'@'192.168.66.246';
-=======
 TO 'gerente_car'@'127.0.0.1';
 
 GRANT SELECT
@@ -456,38 +344,10 @@ TO 'gerente_car'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_car'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente HER grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_HER 
-<<<<<<< HEAD
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_her'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_her'@'192.168.66.246';
-=======
 TO 'gerente_her'@'127.0.0.1';
 
 GRANT SELECT
@@ -513,38 +373,10 @@ TO 'gerente_her'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_her'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente GUANA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_GUANA 
-<<<<<<< HEAD
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_guana'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_guana'@'192.168.66.246';
-=======
 TO 'gerente_guana'@'127.0.0.1';
 
 GRANT SELECT
@@ -570,38 +402,10 @@ TO 'gerente_guana'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_guana'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente PUNTA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_PUNTA 
-<<<<<<< HEAD
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_punta'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_LIM 
-TO 'gerente_punta'@'192.168.66.246';
-=======
 TO 'gerente_punta'@'127.0.0.1';
 
 GRANT SELECT
@@ -627,38 +431,10 @@ TO 'gerente_punta'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
 TO 'gerente_punta'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente LIM grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_LIM 
-<<<<<<< HEAD
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_SJ 
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_ALA 
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_CAR 
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_HER 
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_lim'@'192.168.66.246';
-
-GRANT SELECT
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_lim'@'192.168.66.246';
-=======
 TO 'gerente_lim'@'127.0.0.1';
 
 GRANT SELECT
@@ -684,38 +460,10 @@ TO 'gerente_lim'@'127.0.0.1';
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
 TO 'gerente_lim'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- gerente general grant
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_SJ
-<<<<<<< HEAD
-TO 'gerente_general_sj'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_ALA 
-TO 'gerente_general_ala'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_CAR 
-TO 'gerente_general_car'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_HER 
-TO 'gerente_general_her'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_GUANA 
-TO 'gerente_general_guana'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_PUNTA 
-TO 'gerente_general_punta'@'192.168.66.246';
-
-GRANT INSERT, UPDATE, SELECT, DELETE
-ON supermercado.vista_productos_LIM 
-TO 'gerente_general_lim'@'192.168.66.246';
-=======
 TO 'gerente_general_sj'@'127.0.0.1';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
@@ -741,189 +489,10 @@ TO 'gerente_general_punta'@'127.0.0.1';
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_LIM 
 TO 'gerente_general_lim'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 -- sistemas grant
 GRANT ALL 
 ON supermercado.vista_productos_SJ
-<<<<<<< HEAD
-TO 'sistemas_sj'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_ALA 
-TO 'sistemas_ala'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_CAR 
-TO 'sistemas_car'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_HER 
-TO 'sistemas_her'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_GUANA 
-TO 'sistemas_guana'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_PUNTA 
-TO 'sistemas_punta'@'192.168.66.246';
-
-GRANT ALL 
-ON supermercado.vista_productos_LIM 
-TO 'sistemas_lim'@'192.168.66.246';
-
--- admin user 
-CREATE USER 'sm_admin'@'192.168.66.246'IDENTIFIED BY 'Admin1pass';
--- gerente users
-CREATE USER 'sj_ger'@'192.168.66.246' IDENTIFIED BY 'Sjger1pass';
-CREATE USER 'ala_ger'@'192.168.66.246' IDENTIFIED BY 'Alager1pass';
-CREATE USER 'car_ger'@'192.168.66.246' IDENTIFIED BY 'Carger1pass';
-CREATE USER 'her_ger'@'192.168.66.246' IDENTIFIED BY 'Herger1pass';
-CREATE USER 'guana_ger'@'192.168.66.246' IDENTIFIED BY 'Guanager1pass';
-CREATE USER 'punta_ger'@'192.168.66.246' IDENTIFIED BY 'Puntager1pass';
-CREATE USER 'lim_ger'@'192.168.66.246' IDENTIFIED BY 'Limger1pass';
--- general users
-CREATE USER 'sj_gen1'@'192.168.66.246' IDENTIFIED BY 'Sjgen1pass';
-CREATE USER 'sj_gen2'@'192.168.66.246' IDENTIFIED BY 'Sjgen2pass';
-
-CREATE USER 'ala_gen1'@'192.168.66.246' IDENTIFIED BY 'Alagen1pass';
-CREATE USER 'ala_gen2'@'192.168.66.246' IDENTIFIED BY 'Alagen2pass';
-
-CREATE USER 'car_gen1'@'192.168.66.246' IDENTIFIED BY 'Cargen1pass';
-CREATE USER 'car_gen2'@'192.168.66.246'IDENTIFIED BY 'Cargen2pass';
-
-CREATE USER 'her_gen1'@'192.168.66.246' IDENTIFIED BY 'Hergen1pass';
-CREATE USER 'her_gen2'@'192.168.66.246'IDENTIFIED BY 'Hergen2pass';
-
-CREATE USER 'guana_gen1'@'192.168.66.246' IDENTIFIED BY 'Guanagen1pass';
-CREATE USER 'guana_gen2'@'192.168.66.246' IDENTIFIED BY 'Guanagen2pass';
-
-CREATE USER 'punta_gen1'@'192.168.66.246' IDENTIFIED BY 'Puntagen1pass';
-CREATE USER 'punta_gen2'@'192.168.66.246' IDENTIFIED BY 'Puntagen2pass';
-
-CREATE USER 'lim_gen1'@'192.168.66.246' IDENTIFIED BY 'Limgen1pass';
-CREATE USER 'lim_gen2'@'192.168.66.246' IDENTIFIED BY 'Limgen2pass';
--- sistemas users
-CREATE USER 'sj_sis1'@'192.168.66.246' IDENTIFIED BY 'Sjsis1pass';
-CREATE USER 'sj_sis2'@'192.168.66.246' IDENTIFIED BY 'Sjsis2pass';
-CREATE USER 'sj_sis3'@'192.168.66.246' IDENTIFIED BY 'Sjsis3pass';
-
-CREATE USER 'ala_sis1'@'192.168.66.246' IDENTIFIED BY 'Alasis1pass';
-CREATE USER 'ala_sis2'@'192.168.66.246'IDENTIFIED BY 'Alasis2pass';
-CREATE USER 'ala_sis3'@'192.168.66.246' IDENTIFIED BY 'Alasis3pass';
-
-CREATE USER 'car_sis1'@'192.168.66.246' IDENTIFIED BY 'Carsis1pass';
-CREATE USER 'car_sis2'@'192.168.66.246' IDENTIFIED BY 'Carsis2pass';
-CREATE USER 'car_sis3'@'192.168.66.246' IDENTIFIED BY 'Carsis3pass';
-
-CREATE USER 'her_sis1'@'192.168.66.246'IDENTIFIED BY 'Hersis1pass';
-CREATE USER 'her_sis2'@'192.168.66.246' IDENTIFIED BY 'Hersis2pass';
-CREATE USER 'her_sis3'@'192.168.66.246' IDENTIFIED BY 'Hersis3pass';
-
-CREATE USER 'guana_sis1'@'192.168.66.246' IDENTIFIED BY 'Guanasis1pass';
-CREATE USER 'guana_sis2'@'192.168.66.246' IDENTIFIED BY 'Guanasis2pass';
-CREATE USER 'guana_sis3'@'192.168.66.246' IDENTIFIED BY 'Guanasis3pass';
-
-CREATE USER 'punta_sis1'@'192.168.66.246' IDENTIFIED BY 'Puntasis1pass';
-CREATE USER 'punta_sis2'@'192.168.66.246' IDENTIFIED BY 'Puntasis2pass';
-CREATE USER 'punta_sis3'@'192.168.66.246' IDENTIFIED BY 'Puntasis3pass';
-
-CREATE USER 'lim_sis1'@'192.168.66.246' IDENTIFIED BY 'Limsis1pass';
-CREATE USER 'lim_sis2'@'192.168.66.246' IDENTIFIED BY 'Limsis2pass';
-CREATE USER 'lim_sis3'@'192.168.66.246' IDENTIFIED BY 'Limsis3pass';
-
--- assign admin
-GRANT 'administrador'@'192.168.66.246' 
-TO 'sm_admin'@'192.168.66.246';
-
--- assign gerente
-GRANT 'gerente_sj'@'192.168.66.246'
-TO 'sj_ger'@'192.168.66.246';
-
-GRANT 'gerente_ala'@'192.168.66.246'
-TO 'ala_ger'@'192.168.66.246';
-
-GRANT 'gerente_car'@'192.168.66.246'
-TO 'car_ger'@'192.168.66.246';
-
-GRANT 'gerente_lim'@'192.168.66.246'
-TO 'her_ger'@'192.168.66.246';
-
-GRANT 'gerente_her'@'192.168.66.246'
-TO 'guana_ger'@'192.168.66.246';
-
-GRANT 'gerente_guana'@'192.168.66.246'
-TO 'punta_ger'@'192.168.66.246';
-
-GRANT 'gerente_punta'@'192.168.66.246'
-TO 'lim_ger'@'192.168.66.246';
-
--- assign general
-GRANT 'gerente_general_sj'@'192.168.66.246'
-TO 'sj_gen1'@'192.168.66.246',
-   'sj_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_ala'@'192.168.66.246'
-TO 'ala_gen1'@'192.168.66.246',
-   'ala_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_car'@'192.168.66.246'
-TO 'car_gen1'@'192.168.66.246',
-   'car_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_her'@'192.168.66.246'
-TO 'her_gen1'@'192.168.66.246',
-   'her_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_guana'@'192.168.66.246'
-TO 'guana_gen1'@'192.168.66.246',
-   'guana_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_punta'@'192.168.66.246'
-TO 'punta_gen1'@'192.168.66.246',
-   'punta_gen2'@'192.168.66.246';
-
-GRANT 'gerente_general_lim'@'192.168.66.246'
-TO 'lim_gen1'@'192.168.66.246',
-   'lim_gen2'@'192.168.66.246';
-  
--- assign sistemas
-GRANT 'sistemas_sj'@'192.168.66.246'
-TO 'sj_sis1'@'192.168.66.246',
-   'sj_sis2'@'192.168.66.246',
-   'sj_sis3'@'192.168.66.246';
-
-GRANT 'sistemas_ala'@'192.168.66.246'
-TO 'ala_sis1'@'192.168.66.246',
-   'ala_sis2'@'192.168.66.246',
-   'ala_sis3'@'192.168.66.246';
-
-GRANT 'sistemas_car'@'192.168.66.246'
-TO 'car_sis1'@'192.168.66.246',
-   'car_sis2'@'192.168.66.246',
-   'car_sis3'@'192.168.66.246';
-   
-GRANT 'sistemas_her'@'192.168.66.246'
-TO 'her_sis1'@'192.168.66.246',
-   'her_sis2'@'192.168.66.246',
-   'her_sis3'@'192.168.66.246';
-   
-GRANT 'sistemas_guana'@'192.168.66.246'
-TO 'guana_sis1'@'192.168.66.246',
-   'guana_sis2'@'192.168.66.246',
-   'guana_sis3'@'192.168.66.246';
-   
-GRANT 'sistemas_punta'@'192.168.66.246'
-TO 'punta_sis1'@'192.168.66.246',
-   'punta_sis2'@'192.168.66.246',
-   'punta_sis3'@'192.168.66.246';
-   
-GRANT 'sistemas_lim'@'192.168.66.246'
-TO 'lim_sis1'@'192.168.66.246',
-   'lim_sis2'@'192.168.66.246',
-   'lim_sis3'@'192.168.66.246';
-=======
 TO 'sistemas_sj'@'127.0.0.1';
 
 GRANT ALL 
@@ -1100,116 +669,10 @@ GRANT 'sistemas_lim'@'127.0.0.1'
 TO 'lim_sis1'@'127.0.0.1',
    'lim_sis2'@'127.0.0.1',
    'lim_sis3'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c
 
 
 
 -- admin user 
-<<<<<<< HEAD
-grant replication slave on *.* to 'sm_admin'@'192.168.66.246'; 
--- gerente users
-grant replication slave on *.* to 'sj_ger'@'192.168.66.246';
-grant replication slave on *.* to 'ala_ger'@'192.168.66.246';  
-grant replication slave on *.* to 'car_ger'@'192.168.66.246'; 
-grant replication slave on *.* to 'her_ger'@'192.168.66.246'; 
-grant replication slave on *.* to 'guana_ger'@'192.168.66.246';  
-grant replication slave on *.* to 'punta_ger'@'192.168.66.246';  
-grant replication slave on *.* to 'lim_ger'@'192.168.66.246';  
--- general users
-grant replication slave on *.* to 'sj_gen1'@'192.168.66.246'; 
-grant replication slave on *.* to 'sj_gen2'@'192.168.66.246';  
-
-grant replication slave on *.* to 'ala_gen1'@'192.168.66.246';  
-grant replication slave on *.* to 'ala_gen2'@'192.168.66.246';
-
-grant replication slave on *.* to 'car_gen1'@'192.168.66.246';  
-grant replication slave on *.* to 'car_gen2'@'192.168.66.246';
-
-grant replication slave on *.* to 'her_gen1'@'192.168.66.246';  
-grant replication slave on *.* to 'her_gen2'@'192.168.66.246'; 
-
-grant replication slave on *.* to 'guana_gen1'@'192.168.66.246';  
-grant replication slave on *.* to 'guana_gen2'@'192.168.66.246';  
-
-grant replication slave on *.* to 'punta_gen1'@'192.168.66.246';  
-grant replication slave on *.* to 'punta_gen2'@'192.168.66.246';  
-
-grant replication slave on *.* to 'lim_gen1'@'192.168.66.246'; 
-grant replication slave on *.* to 'lim_gen2'@'192.168.66.246';
--- sistemas users
-grant replication slave on *.* to 'sj_sis1'@'192.168.66.246';  
-grant replication slave on *.* to 'sj_sis2'@'192.168.66.246'; 
-grant replication slave on *.* to 'sj_sis3'@'192.168.66.246';  
-
-grant replication slave on *.* to 'ala_sis1'@'192.168.66.246';  
-grant replication slave on *.* to 'ala_sis2'@'192.168.66.246'; 
-grant replication slave on *.* to 'ala_sis3'@'192.168.66.246'; 
-
-grant replication slave on *.* to 'car_sis1'@'192.168.66.246';  
-grant replication slave on *.* to 'car_sis2'@'192.168.66.246'; 
-grant replication slave on *.* to 'car_sis3'@'192.168.66.246';  
-
-grant replication slave on *.* to 'her_sis1'@'192.168.66.246'; 
-grant replication slave on *.* to 'her_sis2'@'192.168.66.246';  
-grant replication slave on *.* to 'her_sis3'@'192.168.66.246'; 
-
-grant replication slave on *.* to 'guana_sis1'@'192.168.66.246';  
-grant replication slave on *.* to 'guana_sis2'@'192.168.66.246';  
-grant replication slave on *.* to 'guana_sis3'@'192.168.66.246';  
-
-grant replication slave on *.* to 'punta_sis1'@'192.168.66.246'; 
-grant replication slave on *.* to 'punta_sis2'@'192.168.66.246'; 
-grant replication slave on *.* to 'punta_sis3'@'192.168.66.246'; 
-
-grant replication slave on *.* to 'lim_sis1'@'192.168.66.246'; 
-grant replication slave on *.* to 'lim_sis2'@'192.168.66.246';  
-grant replication slave on *.* to 'lim_sis3'@'192.168.66.246'; 
-
-SET DEFAULT ROLE ALL TO
-'sm_admin'@'192.168.66.246',
-'sj_ger'@'192.168.66.246',
-'ala_ger'@'192.168.66.246',
-'car_ger'@'192.168.66.246',
-'her_ger'@'192.168.66.246',
-'guana_ger'@'192.168.66.246',
-'punta_ger'@'192.168.66.246',
-'lim_ger'@'192.168.66.246',
-'sj_gen1'@'192.168.66.246',
-'sj_gen2'@'192.168.66.246',
-'ala_gen1'@'192.168.66.246',
-'ala_gen2'@'192.168.66.246',
-'car_gen1'@'192.168.66.246',
-'car_gen2'@'192.168.66.246',
-'her_gen1'@'192.168.66.246',
-'her_gen2'@'192.168.66.246',
-'guana_gen1'@'192.168.66.246',
-'guana_gen2'@'192.168.66.246',
-'punta_gen1'@'192.168.66.246',
-'punta_gen2'@'192.168.66.246', 
-'lim_gen1'@'192.168.66.246',
-'lim_gen2'@'192.168.66.246', 
-'sj_sis1'@'192.168.66.246',
-'sj_sis2'@'192.168.66.246',
-'sj_sis3'@'192.168.66.246',
-'ala_sis1'@'192.168.66.246',
-'ala_sis2'@'192.168.66.246',
-'ala_sis3'@'192.168.66.246',
-'car_sis1'@'192.168.66.246',
-'car_sis2'@'192.168.66.246',
-'car_sis3'@'192.168.66.246',
-'her_sis1'@'192.168.66.246',
-'her_sis2'@'192.168.66.246',
-'her_sis3'@'192.168.66.246',
-'guana_sis1'@'192.168.66.246',
-'guana_sis2'@'192.168.66.246',
-'guana_sis3'@'192.168.66.246',
-'punta_sis1'@'192.168.66.246',
-'punta_sis2'@'192.168.66.246',
-'punta_sis3'@'192.168.66.246', 
-'lim_sis1'@'192.168.66.246',
-'lim_sis2'@'192.168.66.246',
-'lim_sis3'@'192.168.66.246';
-=======
 grant replication slave on *.* to 'sm_admin'@'127.0.0.1'; 
 -- gerente users
 grant replication slave on *.* to 'sj_ger'@'127.0.0.1';
@@ -1313,4 +776,3 @@ SET DEFAULT ROLE ALL TO
 'lim_sis1'@'127.0.0.1',
 'lim_sis2'@'127.0.0.1',
 'lim_sis3'@'127.0.0.1';
->>>>>>> d22e86def71ec0b6a7205a4e7f6de5dc90f9fa7c

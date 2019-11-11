@@ -230,549 +230,549 @@ CREATE VIEW vista_productos_GUANA AS SELECT * FROM productos where cod_punto_ven
 CREATE VIEW vista_productos_PUNTA AS SELECT * FROM productos where cod_punto_venta = 'PU006';
 CREATE VIEW vista_productos_LIM AS SELECT * FROM productos where cod_punto_venta = 'LI007';
 
-CREATE ROLE	'administrador'@'127.0.0.1';
-CREATE ROLE	'gerente_sj'@'127.0.0.1';
-CREATE ROLE	'gerente_ala'@'127.0.0.1';
-CREATE ROLE	'gerente_car'@'127.0.0.1';
-CREATE ROLE	'gerente_her'@'127.0.0.1';
-CREATE ROLE	'gerente_guana'@'127.0.0.1';
-CREATE ROLE	'gerente_punta'@'127.0.0.1';
-CREATE ROLE	'gerente_lim'@'127.0.0.1';
-CREATE ROLE	'gerente_general_sj'@'127.0.0.1';
-CREATE ROLE	'gerente_general_ala'@'127.0.0.1';
-CREATE ROLE	'gerente_general_car'@'127.0.0.1';
-CREATE ROLE	'gerente_general_her'@'127.0.0.1';
-CREATE ROLE	'gerente_general_guana'@'127.0.0.1';
-CREATE ROLE	'gerente_general_punta'@'127.0.0.1';
-CREATE ROLE	'gerente_general_lim'@'127.0.0.1';
-CREATE ROLE	'sistemas_sj'@'127.0.0.1';
-CREATE ROLE	'sistemas_ala'@'127.0.0.1';
-CREATE ROLE	'sistemas_car'@'127.0.0.1';
-CREATE ROLE	'sistemas_her'@'127.0.0.1';
-CREATE ROLE	'sistemas_guana'@'127.0.0.1';
-CREATE ROLE	'sistemas_punta'@'127.0.0.1';
-CREATE ROLE	'sistemas_lim'@'127.0.0.1';
+CREATE ROLE	'administrador'@'localhost';
+CREATE ROLE	'gerente_sj'@'localhost';
+CREATE ROLE	'gerente_ala'@'localhost';
+CREATE ROLE	'gerente_car'@'localhost';
+CREATE ROLE	'gerente_her'@'localhost';
+CREATE ROLE	'gerente_guana'@'localhost';
+CREATE ROLE	'gerente_punta'@'localhost';
+CREATE ROLE	'gerente_lim'@'localhost';
+CREATE ROLE	'gerente_general_sj'@'localhost';
+CREATE ROLE	'gerente_general_ala'@'localhost';
+CREATE ROLE	'gerente_general_car'@'localhost';
+CREATE ROLE	'gerente_general_her'@'localhost';
+CREATE ROLE	'gerente_general_guana'@'localhost';
+CREATE ROLE	'gerente_general_punta'@'localhost';
+CREATE ROLE	'gerente_general_lim'@'localhost';
+CREATE ROLE	'sistemas_sj'@'localhost';
+CREATE ROLE	'sistemas_ala'@'localhost';
+CREATE ROLE	'sistemas_car'@'localhost';
+CREATE ROLE	'sistemas_her'@'localhost';
+CREATE ROLE	'sistemas_guana'@'localhost';
+CREATE ROLE	'sistemas_punta'@'localhost';
+CREATE ROLE	'sistemas_lim'@'localhost';
 
 -- admin grant
 GRANT ALL 
 ON supermercado.* 
-TO 'administrador'@'127.0.0.1';
+TO 'administrador'@'localhost';
 
 -- gerente SJ grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_SJ 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_sj'@'127.0.0.1';
+TO 'gerente_sj'@'localhost';
 
 -- gerente ALA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_ALA 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_ala'@'127.0.0.1';
+TO 'gerente_ala'@'localhost';
 
 -- gerente CAR grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_CAR 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_car'@'127.0.0.1';
+TO 'gerente_car'@'localhost';
 
 -- gerente HER grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_HER 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_her'@'127.0.0.1';
+TO 'gerente_her'@'localhost';
 
 -- gerente GUANA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_guana'@'127.0.0.1';
+TO 'gerente_guana'@'localhost';
 
 -- gerente PUNTA grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_LIM 
-TO 'gerente_punta'@'127.0.0.1';
+TO 'gerente_punta'@'localhost';
 
 -- gerente LIM grant
 GRANT SELECT, UPDATE
 ON supermercado.vista_productos_LIM 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_SJ 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_ALA 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_CAR 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_HER 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 GRANT SELECT
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_lim'@'127.0.0.1';
+TO 'gerente_lim'@'localhost';
 
 -- gerente general grant
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_SJ
-TO 'gerente_general_sj'@'127.0.0.1';
+TO 'gerente_general_sj'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_ALA 
-TO 'gerente_general_ala'@'127.0.0.1';
+TO 'gerente_general_ala'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_CAR 
-TO 'gerente_general_car'@'127.0.0.1';
+TO 'gerente_general_car'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_HER 
-TO 'gerente_general_her'@'127.0.0.1';
+TO 'gerente_general_her'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_GUANA 
-TO 'gerente_general_guana'@'127.0.0.1';
+TO 'gerente_general_guana'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_PUNTA 
-TO 'gerente_general_punta'@'127.0.0.1';
+TO 'gerente_general_punta'@'localhost';
 
 GRANT INSERT, UPDATE, SELECT, DELETE
 ON supermercado.vista_productos_LIM 
-TO 'gerente_general_lim'@'127.0.0.1';
+TO 'gerente_general_lim'@'localhost';
 
 -- sistemas grant
 GRANT ALL 
 ON supermercado.vista_productos_SJ
-TO 'sistemas_sj'@'127.0.0.1';
+TO 'sistemas_sj'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_ALA 
-TO 'sistemas_ala'@'127.0.0.1';
+TO 'sistemas_ala'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_CAR 
-TO 'sistemas_car'@'127.0.0.1';
+TO 'sistemas_car'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_HER 
-TO 'sistemas_her'@'127.0.0.1';
+TO 'sistemas_her'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_GUANA 
-TO 'sistemas_guana'@'127.0.0.1';
+TO 'sistemas_guana'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_PUNTA 
-TO 'sistemas_punta'@'127.0.0.1';
+TO 'sistemas_punta'@'localhost';
 
 GRANT ALL 
 ON supermercado.vista_productos_LIM 
-TO 'sistemas_lim'@'127.0.0.1';
+TO 'sistemas_lim'@'localhost';
 
 -- admin user 
-CREATE USER 'sm_admin'@'127.0.0.1'IDENTIFIED BY 'Admin1pass';
+CREATE USER 'sm_admin'@'localhost'IDENTIFIED BY 'Admin1pass';
 -- gerente users
-CREATE USER 'sj_ger'@'127.0.0.1' IDENTIFIED BY 'Sjger1pass';
-CREATE USER 'ala_ger'@'127.0.0.1' IDENTIFIED BY 'Alager1pass';
-CREATE USER 'car_ger'@'127.0.0.1' IDENTIFIED BY 'Carger1pass';
-CREATE USER 'her_ger'@'127.0.0.1' IDENTIFIED BY 'Herger1pass';
-CREATE USER 'guana_ger'@'127.0.0.1' IDENTIFIED BY 'Guanager1pass';
-CREATE USER 'punta_ger'@'127.0.0.1' IDENTIFIED BY 'Puntager1pass';
-CREATE USER 'lim_ger'@'127.0.0.1' IDENTIFIED BY 'Limger1pass';
+CREATE USER 'sj_ger'@'localhost' IDENTIFIED BY 'Sjger1pass';
+CREATE USER 'ala_ger'@'localhost' IDENTIFIED BY 'Alager1pass';
+CREATE USER 'car_ger'@'localhost' IDENTIFIED BY 'Carger1pass';
+CREATE USER 'her_ger'@'localhost' IDENTIFIED BY 'Herger1pass';
+CREATE USER 'guana_ger'@'localhost' IDENTIFIED BY 'Guanager1pass';
+CREATE USER 'punta_ger'@'localhost' IDENTIFIED BY 'Puntager1pass';
+CREATE USER 'lim_ger'@'localhost' IDENTIFIED BY 'Limger1pass';
 -- general users
-CREATE USER 'sj_gen1'@'127.0.0.1' IDENTIFIED BY 'Sjgen1pass';
-CREATE USER 'sj_gen2'@'127.0.0.1' IDENTIFIED BY 'Sjgen2pass';
+CREATE USER 'sj_gen1'@'localhost' IDENTIFIED BY 'Sjgen1pass';
+CREATE USER 'sj_gen2'@'localhost' IDENTIFIED BY 'Sjgen2pass';
 
-CREATE USER 'ala_gen1'@'127.0.0.1' IDENTIFIED BY 'Alagen1pass';
-CREATE USER 'ala_gen2'@'127.0.0.1' IDENTIFIED BY 'Alagen2pass';
+CREATE USER 'ala_gen1'@'localhost' IDENTIFIED BY 'Alagen1pass';
+CREATE USER 'ala_gen2'@'localhost' IDENTIFIED BY 'Alagen2pass';
 
-CREATE USER 'car_gen1'@'127.0.0.1' IDENTIFIED BY 'Cargen1pass';
-CREATE USER 'car_gen2'@'127.0.0.1'IDENTIFIED BY 'Cargen2pass';
+CREATE USER 'car_gen1'@'localhost' IDENTIFIED BY 'Cargen1pass';
+CREATE USER 'car_gen2'@'localhost'IDENTIFIED BY 'Cargen2pass';
 
-CREATE USER 'her_gen1'@'127.0.0.1' IDENTIFIED BY 'Hergen1pass';
-CREATE USER 'her_gen2'@'127.0.0.1'IDENTIFIED BY 'Hergen2pass';
+CREATE USER 'her_gen1'@'localhost' IDENTIFIED BY 'Hergen1pass';
+CREATE USER 'her_gen2'@'localhost'IDENTIFIED BY 'Hergen2pass';
 
-CREATE USER 'guana_gen1'@'127.0.0.1' IDENTIFIED BY 'Guanagen1pass';
-CREATE USER 'guana_gen2'@'127.0.0.1' IDENTIFIED BY 'Guanagen2pass';
+CREATE USER 'guana_gen1'@'localhost' IDENTIFIED BY 'Guanagen1pass';
+CREATE USER 'guana_gen2'@'localhost' IDENTIFIED BY 'Guanagen2pass';
 
-CREATE USER 'punta_gen1'@'127.0.0.1' IDENTIFIED BY 'Puntagen1pass';
-CREATE USER 'punta_gen2'@'127.0.0.1' IDENTIFIED BY 'Puntagen2pass';
+CREATE USER 'punta_gen1'@'localhost' IDENTIFIED BY 'Puntagen1pass';
+CREATE USER 'punta_gen2'@'localhost' IDENTIFIED BY 'Puntagen2pass';
 
-CREATE USER 'lim_gen1'@'127.0.0.1' IDENTIFIED BY 'Limgen1pass';
-CREATE USER 'lim_gen2'@'127.0.0.1' IDENTIFIED BY 'Limgen2pass';
+CREATE USER 'lim_gen1'@'localhost' IDENTIFIED BY 'Limgen1pass';
+CREATE USER 'lim_gen2'@'localhost' IDENTIFIED BY 'Limgen2pass';
 -- sistemas users
-CREATE USER 'sj_sis1'@'127.0.0.1' IDENTIFIED BY 'Sjsis1pass';
-CREATE USER 'sj_sis2'@'127.0.0.1' IDENTIFIED BY 'Sjsis2pass';
-CREATE USER 'sj_sis3'@'127.0.0.1' IDENTIFIED BY 'Sjsis3pass';
+CREATE USER 'sj_sis1'@'localhost' IDENTIFIED BY 'Sjsis1pass';
+CREATE USER 'sj_sis2'@'localhost' IDENTIFIED BY 'Sjsis2pass';
+CREATE USER 'sj_sis3'@'localhost' IDENTIFIED BY 'Sjsis3pass';
 
-CREATE USER 'ala_sis1'@'127.0.0.1' IDENTIFIED BY 'Alasis1pass';
-CREATE USER 'ala_sis2'@'127.0.0.1'IDENTIFIED BY 'Alasis2pass';
-CREATE USER 'ala_sis3'@'127.0.0.1' IDENTIFIED BY 'Alasis3pass';
+CREATE USER 'ala_sis1'@'localhost' IDENTIFIED BY 'Alasis1pass';
+CREATE USER 'ala_sis2'@'localhost'IDENTIFIED BY 'Alasis2pass';
+CREATE USER 'ala_sis3'@'localhost' IDENTIFIED BY 'Alasis3pass';
 
-CREATE USER 'car_sis1'@'127.0.0.1' IDENTIFIED BY 'Carsis1pass';
-CREATE USER 'car_sis2'@'127.0.0.1' IDENTIFIED BY 'Carsis2pass';
-CREATE USER 'car_sis3'@'127.0.0.1' IDENTIFIED BY 'Carsis3pass';
+CREATE USER 'car_sis1'@'localhost' IDENTIFIED BY 'Carsis1pass';
+CREATE USER 'car_sis2'@'localhost' IDENTIFIED BY 'Carsis2pass';
+CREATE USER 'car_sis3'@'localhost' IDENTIFIED BY 'Carsis3pass';
 
-CREATE USER 'her_sis1'@'127.0.0.1'IDENTIFIED BY 'Hersis1pass';
-CREATE USER 'her_sis2'@'127.0.0.1' IDENTIFIED BY 'Hersis2pass';
-CREATE USER 'her_sis3'@'127.0.0.1' IDENTIFIED BY 'Hersis3pass';
+CREATE USER 'her_sis1'@'localhost'IDENTIFIED BY 'Hersis1pass';
+CREATE USER 'her_sis2'@'localhost' IDENTIFIED BY 'Hersis2pass';
+CREATE USER 'her_sis3'@'localhost' IDENTIFIED BY 'Hersis3pass';
 
-CREATE USER 'guana_sis1'@'127.0.0.1' IDENTIFIED BY 'Guanasis1pass';
-CREATE USER 'guana_sis2'@'127.0.0.1' IDENTIFIED BY 'Guanasis2pass';
-CREATE USER 'guana_sis3'@'127.0.0.1' IDENTIFIED BY 'Guanasis3pass';
+CREATE USER 'guana_sis1'@'localhost' IDENTIFIED BY 'Guanasis1pass';
+CREATE USER 'guana_sis2'@'localhost' IDENTIFIED BY 'Guanasis2pass';
+CREATE USER 'guana_sis3'@'localhost' IDENTIFIED BY 'Guanasis3pass';
 
-CREATE USER 'punta_sis1'@'127.0.0.1' IDENTIFIED BY 'Puntasis1pass';
-CREATE USER 'punta_sis2'@'127.0.0.1' IDENTIFIED BY 'Puntasis2pass';
-CREATE USER 'punta_sis3'@'127.0.0.1' IDENTIFIED BY 'Puntasis3pass';
+CREATE USER 'punta_sis1'@'localhost' IDENTIFIED BY 'Puntasis1pass';
+CREATE USER 'punta_sis2'@'localhost' IDENTIFIED BY 'Puntasis2pass';
+CREATE USER 'punta_sis3'@'localhost' IDENTIFIED BY 'Puntasis3pass';
 
-CREATE USER 'lim_sis1'@'127.0.0.1' IDENTIFIED BY 'Limsis1pass';
-CREATE USER 'lim_sis2'@'127.0.0.1' IDENTIFIED BY 'Limsis2pass';
-CREATE USER 'lim_sis3'@'127.0.0.1' IDENTIFIED BY 'Limsis3pass';
+CREATE USER 'lim_sis1'@'localhost' IDENTIFIED BY 'Limsis1pass';
+CREATE USER 'lim_sis2'@'localhost' IDENTIFIED BY 'Limsis2pass';
+CREATE USER 'lim_sis3'@'localhost' IDENTIFIED BY 'Limsis3pass';
 
 -- assign admin
-GRANT 'administrador'@'127.0.0.1' 
-TO 'sm_admin'@'127.0.0.1';
+GRANT 'administrador'@'localhost' 
+TO 'sm_admin'@'localhost';
 
 -- assign gerente
-GRANT 'gerente_sj'@'127.0.0.1'
-TO 'sj_ger'@'127.0.0.1';
+GRANT 'gerente_sj'@'localhost'
+TO 'sj_ger'@'localhost';
 
-GRANT 'gerente_ala'@'127.0.0.1'
-TO 'ala_ger'@'127.0.0.1';
+GRANT 'gerente_ala'@'localhost'
+TO 'ala_ger'@'localhost';
 
-GRANT 'gerente_car'@'127.0.0.1'
-TO 'car_ger'@'127.0.0.1';
+GRANT 'gerente_car'@'localhost'
+TO 'car_ger'@'localhost';
 
-GRANT 'gerente_lim'@'127.0.0.1'
-TO 'her_ger'@'127.0.0.1';
+GRANT 'gerente_lim'@'localhost'
+TO 'her_ger'@'localhost';
 
-GRANT 'gerente_her'@'127.0.0.1'
-TO 'guana_ger'@'127.0.0.1';
+GRANT 'gerente_her'@'localhost'
+TO 'guana_ger'@'localhost';
 
-GRANT 'gerente_guana'@'127.0.0.1'
-TO 'punta_ger'@'127.0.0.1';
+GRANT 'gerente_guana'@'localhost'
+TO 'punta_ger'@'localhost';
 
-GRANT 'gerente_punta'@'127.0.0.1'
-TO 'lim_ger'@'127.0.0.1';
+GRANT 'gerente_punta'@'localhost'
+TO 'lim_ger'@'localhost';
 
 -- assign general
-GRANT 'gerente_general_sj'@'127.0.0.1'
-TO 'sj_gen1'@'127.0.0.1',
-   'sj_gen2'@'127.0.0.1';
+GRANT 'gerente_general_sj'@'localhost'
+TO 'sj_gen1'@'localhost',
+   'sj_gen2'@'localhost';
 
-GRANT 'gerente_general_ala'@'127.0.0.1'
-TO 'ala_gen1'@'127.0.0.1',
-   'ala_gen2'@'127.0.0.1';
+GRANT 'gerente_general_ala'@'localhost'
+TO 'ala_gen1'@'localhost',
+   'ala_gen2'@'localhost';
 
-GRANT 'gerente_general_car'@'127.0.0.1'
-TO 'car_gen1'@'127.0.0.1',
-   'car_gen2'@'127.0.0.1';
+GRANT 'gerente_general_car'@'localhost'
+TO 'car_gen1'@'localhost',
+   'car_gen2'@'localhost';
 
-GRANT 'gerente_general_her'@'127.0.0.1'
-TO 'her_gen1'@'127.0.0.1',
-   'her_gen2'@'127.0.0.1';
+GRANT 'gerente_general_her'@'localhost'
+TO 'her_gen1'@'localhost',
+   'her_gen2'@'localhost';
 
-GRANT 'gerente_general_guana'@'127.0.0.1'
-TO 'guana_gen1'@'127.0.0.1',
-   'guana_gen2'@'127.0.0.1';
+GRANT 'gerente_general_guana'@'localhost'
+TO 'guana_gen1'@'localhost',
+   'guana_gen2'@'localhost';
 
-GRANT 'gerente_general_punta'@'127.0.0.1'
-TO 'punta_gen1'@'127.0.0.1',
-   'punta_gen2'@'127.0.0.1';
+GRANT 'gerente_general_punta'@'localhost'
+TO 'punta_gen1'@'localhost',
+   'punta_gen2'@'localhost';
 
-GRANT 'gerente_general_lim'@'127.0.0.1'
-TO 'lim_gen1'@'127.0.0.1',
-   'lim_gen2'@'127.0.0.1';
+GRANT 'gerente_general_lim'@'localhost'
+TO 'lim_gen1'@'localhost',
+   'lim_gen2'@'localhost';
   
 -- assign sistemas
-GRANT 'sistemas_sj'@'127.0.0.1'
-TO 'sj_sis1'@'127.0.0.1',
-   'sj_sis2'@'127.0.0.1',
-   'sj_sis3'@'127.0.0.1';
+GRANT 'sistemas_sj'@'localhost'
+TO 'sj_sis1'@'localhost',
+   'sj_sis2'@'localhost',
+   'sj_sis3'@'localhost';
 
-GRANT 'sistemas_ala'@'127.0.0.1'
-TO 'ala_sis1'@'127.0.0.1',
-   'ala_sis2'@'127.0.0.1',
-   'ala_sis3'@'127.0.0.1';
+GRANT 'sistemas_ala'@'localhost'
+TO 'ala_sis1'@'localhost',
+   'ala_sis2'@'localhost',
+   'ala_sis3'@'localhost';
 
-GRANT 'sistemas_car'@'127.0.0.1'
-TO 'car_sis1'@'127.0.0.1',
-   'car_sis2'@'127.0.0.1',
-   'car_sis3'@'127.0.0.1';
+GRANT 'sistemas_car'@'localhost'
+TO 'car_sis1'@'localhost',
+   'car_sis2'@'localhost',
+   'car_sis3'@'localhost';
    
-GRANT 'sistemas_her'@'127.0.0.1'
-TO 'her_sis1'@'127.0.0.1',
-   'her_sis2'@'127.0.0.1',
-   'her_sis3'@'127.0.0.1';
+GRANT 'sistemas_her'@'localhost'
+TO 'her_sis1'@'localhost',
+   'her_sis2'@'localhost',
+   'her_sis3'@'localhost';
    
-GRANT 'sistemas_guana'@'127.0.0.1'
-TO 'guana_sis1'@'127.0.0.1',
-   'guana_sis2'@'127.0.0.1',
-   'guana_sis3'@'127.0.0.1';
+GRANT 'sistemas_guana'@'localhost'
+TO 'guana_sis1'@'localhost',
+   'guana_sis2'@'localhost',
+   'guana_sis3'@'localhost';
    
-GRANT 'sistemas_punta'@'127.0.0.1'
-TO 'punta_sis1'@'127.0.0.1',
-   'punta_sis2'@'127.0.0.1',
-   'punta_sis3'@'127.0.0.1';
+GRANT 'sistemas_punta'@'localhost'
+TO 'punta_sis1'@'localhost',
+   'punta_sis2'@'localhost',
+   'punta_sis3'@'localhost';
    
-GRANT 'sistemas_lim'@'127.0.0.1'
-TO 'lim_sis1'@'127.0.0.1',
-   'lim_sis2'@'127.0.0.1',
-   'lim_sis3'@'127.0.0.1';
+GRANT 'sistemas_lim'@'localhost'
+TO 'lim_sis1'@'localhost',
+   'lim_sis2'@'localhost',
+   'lim_sis3'@'localhost';
 
 
 
 -- admin user 
-grant replication slave on *.* to 'sm_admin'@'127.0.0.1'; 
+grant replication slave on *.* to 'sm_admin'@'localhost'; 
 -- gerente users
-grant replication slave on *.* to 'sj_ger'@'127.0.0.1';
-grant replication slave on *.* to 'ala_ger'@'127.0.0.1';  
-grant replication slave on *.* to 'car_ger'@'127.0.0.1'; 
-grant replication slave on *.* to 'her_ger'@'127.0.0.1'; 
-grant replication slave on *.* to 'guana_ger'@'127.0.0.1';  
-grant replication slave on *.* to 'punta_ger'@'127.0.0.1';  
-grant replication slave on *.* to 'lim_ger'@'127.0.0.1';  
+grant replication slave on *.* to 'sj_ger'@'localhost';
+grant replication slave on *.* to 'ala_ger'@'localhost';  
+grant replication slave on *.* to 'car_ger'@'localhost'; 
+grant replication slave on *.* to 'her_ger'@'localhost'; 
+grant replication slave on *.* to 'guana_ger'@'localhost';  
+grant replication slave on *.* to 'punta_ger'@'localhost';  
+grant replication slave on *.* to 'lim_ger'@'localhost';  
 -- general users
-grant replication slave on *.* to 'sj_gen1'@'127.0.0.1'; 
-grant replication slave on *.* to 'sj_gen2'@'127.0.0.1';  
+grant replication slave on *.* to 'sj_gen1'@'localhost'; 
+grant replication slave on *.* to 'sj_gen2'@'localhost';  
 
-grant replication slave on *.* to 'ala_gen1'@'127.0.0.1';  
-grant replication slave on *.* to 'ala_gen2'@'127.0.0.1';
+grant replication slave on *.* to 'ala_gen1'@'localhost';  
+grant replication slave on *.* to 'ala_gen2'@'localhost';
 
-grant replication slave on *.* to 'car_gen1'@'127.0.0.1';  
-grant replication slave on *.* to 'car_gen2'@'127.0.0.1';
+grant replication slave on *.* to 'car_gen1'@'localhost';  
+grant replication slave on *.* to 'car_gen2'@'localhost';
 
-grant replication slave on *.* to 'her_gen1'@'127.0.0.1';  
-grant replication slave on *.* to 'her_gen2'@'127.0.0.1'; 
+grant replication slave on *.* to 'her_gen1'@'localhost';  
+grant replication slave on *.* to 'her_gen2'@'localhost'; 
 
-grant replication slave on *.* to 'guana_gen1'@'127.0.0.1';  
-grant replication slave on *.* to 'guana_gen2'@'127.0.0.1';  
+grant replication slave on *.* to 'guana_gen1'@'localhost';  
+grant replication slave on *.* to 'guana_gen2'@'localhost';  
 
-grant replication slave on *.* to 'punta_gen1'@'127.0.0.1';  
-grant replication slave on *.* to 'punta_gen2'@'127.0.0.1';  
+grant replication slave on *.* to 'punta_gen1'@'localhost';  
+grant replication slave on *.* to 'punta_gen2'@'localhost';  
 
-grant replication slave on *.* to 'lim_gen1'@'127.0.0.1'; 
-grant replication slave on *.* to 'lim_gen2'@'127.0.0.1';
+grant replication slave on *.* to 'lim_gen1'@'localhost'; 
+grant replication slave on *.* to 'lim_gen2'@'localhost';
 -- sistemas users
-grant replication slave on *.* to 'sj_sis1'@'127.0.0.1';  
-grant replication slave on *.* to 'sj_sis2'@'127.0.0.1'; 
-grant replication slave on *.* to 'sj_sis3'@'127.0.0.1';  
+grant replication slave on *.* to 'sj_sis1'@'localhost';  
+grant replication slave on *.* to 'sj_sis2'@'localhost'; 
+grant replication slave on *.* to 'sj_sis3'@'localhost';  
 
-grant replication slave on *.* to 'ala_sis1'@'127.0.0.1';  
-grant replication slave on *.* to 'ala_sis2'@'127.0.0.1'; 
-grant replication slave on *.* to 'ala_sis3'@'127.0.0.1'; 
+grant replication slave on *.* to 'ala_sis1'@'localhost';  
+grant replication slave on *.* to 'ala_sis2'@'localhost'; 
+grant replication slave on *.* to 'ala_sis3'@'localhost'; 
 
-grant replication slave on *.* to 'car_sis1'@'127.0.0.1';  
-grant replication slave on *.* to 'car_sis2'@'127.0.0.1'; 
-grant replication slave on *.* to 'car_sis3'@'127.0.0.1';  
+grant replication slave on *.* to 'car_sis1'@'localhost';  
+grant replication slave on *.* to 'car_sis2'@'localhost'; 
+grant replication slave on *.* to 'car_sis3'@'localhost';  
 
-grant replication slave on *.* to 'her_sis1'@'127.0.0.1'; 
-grant replication slave on *.* to 'her_sis2'@'127.0.0.1';  
-grant replication slave on *.* to 'her_sis3'@'127.0.0.1'; 
+grant replication slave on *.* to 'her_sis1'@'localhost'; 
+grant replication slave on *.* to 'her_sis2'@'localhost';  
+grant replication slave on *.* to 'her_sis3'@'localhost'; 
 
-grant replication slave on *.* to 'guana_sis1'@'127.0.0.1';  
-grant replication slave on *.* to 'guana_sis2'@'127.0.0.1';  
-grant replication slave on *.* to 'guana_sis3'@'127.0.0.1';  
+grant replication slave on *.* to 'guana_sis1'@'localhost';  
+grant replication slave on *.* to 'guana_sis2'@'localhost';  
+grant replication slave on *.* to 'guana_sis3'@'localhost';  
 
-grant replication slave on *.* to 'punta_sis1'@'127.0.0.1'; 
-grant replication slave on *.* to 'punta_sis2'@'127.0.0.1'; 
-grant replication slave on *.* to 'punta_sis3'@'127.0.0.1'; 
+grant replication slave on *.* to 'punta_sis1'@'localhost'; 
+grant replication slave on *.* to 'punta_sis2'@'localhost'; 
+grant replication slave on *.* to 'punta_sis3'@'localhost'; 
 
-grant replication slave on *.* to 'lim_sis1'@'127.0.0.1'; 
-grant replication slave on *.* to 'lim_sis2'@'127.0.0.1';  
-grant replication slave on *.* to 'lim_sis3'@'127.0.0.1'; 
+grant replication slave on *.* to 'lim_sis1'@'localhost'; 
+grant replication slave on *.* to 'lim_sis2'@'localhost';  
+grant replication slave on *.* to 'lim_sis3'@'localhost'; 
 
 SET DEFAULT ROLE ALL TO
-'sm_admin'@'127.0.0.1',
-'sj_ger'@'127.0.0.1',
-'ala_ger'@'127.0.0.1',
-'car_ger'@'127.0.0.1',
-'her_ger'@'127.0.0.1',
-'guana_ger'@'127.0.0.1',
-'punta_ger'@'127.0.0.1',
-'lim_ger'@'127.0.0.1',
-'sj_gen1'@'127.0.0.1',
-'sj_gen2'@'127.0.0.1',
-'ala_gen1'@'127.0.0.1',
-'ala_gen2'@'127.0.0.1',
-'car_gen1'@'127.0.0.1',
-'car_gen2'@'127.0.0.1',
-'her_gen1'@'127.0.0.1',
-'her_gen2'@'127.0.0.1',
-'guana_gen1'@'127.0.0.1',
-'guana_gen2'@'127.0.0.1',
-'punta_gen1'@'127.0.0.1',
-'punta_gen2'@'127.0.0.1', 
-'lim_gen1'@'127.0.0.1',
-'lim_gen2'@'127.0.0.1', 
-'sj_sis1'@'127.0.0.1',
-'sj_sis2'@'127.0.0.1',
-'sj_sis3'@'127.0.0.1',
-'ala_sis1'@'127.0.0.1',
-'ala_sis2'@'127.0.0.1',
-'ala_sis3'@'127.0.0.1',
-'car_sis1'@'127.0.0.1',
-'car_sis2'@'127.0.0.1',
-'car_sis3'@'127.0.0.1',
-'her_sis1'@'127.0.0.1',
-'her_sis2'@'127.0.0.1',
-'her_sis3'@'127.0.0.1',
-'guana_sis1'@'127.0.0.1',
-'guana_sis2'@'127.0.0.1',
-'guana_sis3'@'127.0.0.1',
-'punta_sis1'@'127.0.0.1',
-'punta_sis2'@'127.0.0.1',
-'punta_sis3'@'127.0.0.1', 
-'lim_sis1'@'127.0.0.1',
-'lim_sis2'@'127.0.0.1',
-'lim_sis3'@'127.0.0.1';
+'sm_admin'@'localhost',
+'sj_ger'@'localhost',
+'ala_ger'@'localhost',
+'car_ger'@'localhost',
+'her_ger'@'localhost',
+'guana_ger'@'localhost',
+'punta_ger'@'localhost',
+'lim_ger'@'localhost',
+'sj_gen1'@'localhost',
+'sj_gen2'@'localhost',
+'ala_gen1'@'localhost',
+'ala_gen2'@'localhost',
+'car_gen1'@'localhost',
+'car_gen2'@'localhost',
+'her_gen1'@'localhost',
+'her_gen2'@'localhost',
+'guana_gen1'@'localhost',
+'guana_gen2'@'localhost',
+'punta_gen1'@'localhost',
+'punta_gen2'@'localhost', 
+'lim_gen1'@'localhost',
+'lim_gen2'@'localhost', 
+'sj_sis1'@'localhost',
+'sj_sis2'@'localhost',
+'sj_sis3'@'localhost',
+'ala_sis1'@'localhost',
+'ala_sis2'@'localhost',
+'ala_sis3'@'localhost',
+'car_sis1'@'localhost',
+'car_sis2'@'localhost',
+'car_sis3'@'localhost',
+'her_sis1'@'localhost',
+'her_sis2'@'localhost',
+'her_sis3'@'localhost',
+'guana_sis1'@'localhost',
+'guana_sis2'@'localhost',
+'guana_sis3'@'localhost',
+'punta_sis1'@'localhost',
+'punta_sis2'@'localhost',
+'punta_sis3'@'localhost', 
+'lim_sis1'@'localhost',
+'lim_sis2'@'localhost',
+'lim_sis3'@'localhost';
